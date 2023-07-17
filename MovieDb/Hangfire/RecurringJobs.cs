@@ -21,8 +21,7 @@ namespace MovieDb.Hangfire
             RecurringJob.RemoveIfExists(nameof(oController.Get));
             RecurringJob.AddOrUpdate<HomeController>(nameof(oController.Get), x =>
                   x.Get(), Cron.Hourly); //hourly
-            //RecurringJob.AddOrUpdate<HomeController>(nameof(oController.Get), x =>
-            //      x.Get(), Cron.MinuteInterval(1), TimeZoneInfo.FindSystemTimeZoneById("Turkey Standard Time"));//2 dakikada bir
+
         }
     }
 }

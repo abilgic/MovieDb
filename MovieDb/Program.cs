@@ -23,6 +23,7 @@ app.UseHangfireDashboard();
 app.UseAuthorization();
 
 app.MapControllers();
+
 var serviceProvider = builder.Services.BuildServiceProvider();
 var _coreService = serviceProvider.GetService<IJobService>();
 var configuration = builder.Configuration;

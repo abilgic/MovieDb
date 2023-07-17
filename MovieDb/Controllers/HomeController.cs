@@ -20,6 +20,8 @@ namespace MovieDb.Controllers
         [HttpGet]
         public async Task<MovieModel> Get()
         {
+            var services = this.HttpContext.RequestServices;
+
             MovieModel movieList = new MovieModel();
             using (var httpClient = new HttpClient())
             {
